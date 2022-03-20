@@ -5,6 +5,7 @@ Access your docker on servers from localhost like using kubectl.
 - Clone this repository
 - Change permission `chmod +x generate.sh`
 - Generate your certs with `generate.sh`
+- Copy `ca.pem`, `server-cert.pem`, `server-key.pem` to your docker servers in this location `/data/certs/`
 
 **Example usage**
 ```
@@ -12,8 +13,6 @@ Access your docker on servers from localhost like using kubectl.
 ./generate.sh -m server -h server -pw change-your-ramdon-string -t certs -e 900
 ./generate.sh -m client -h client -pw change-your-ramdon-string -t certs -e 900
 ```
-
-- Copy `ca.pem`, `server-cert.pem`, `server-key.pem` to your docker servers in this location `/data/certs/`
 
 ## How to enable Docker API?
 - Open your docker.service `/lib/systemd/system/docker.service`
@@ -24,6 +23,7 @@ Access your docker on servers from localhost like using kubectl.
 - Create a new file in `/etc/docker/daemon.json` in your docker servers
 - Look `daemon.json` in this repository
 - Restart your docker service `systemctl restart docker`
+- Create virtual host `"echo your-ip server" > /etc/hosts`
 
 ## How to use?
 - `docker -H localhost:2376 --tlsverify --tlscacert=ca.pem --tlscert=client-cert.pem --tlskey=client-key.pem ps -a`
