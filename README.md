@@ -26,4 +26,6 @@ Access your docker on servers from localhost like using kubectl.
 - Create virtual host `"echo your-ip server" > /etc/hosts`
 
 ## How to use?
-- `docker -H server:2376 --tlsverify --tlscacert=ca.pem --tlscert=client-cert.pem --tlskey=client-key.pem ps -a`
+```
+docker -H server:2376 --tlsverify --tlscacert=ca.pem --tlscert=client-cert.pem --tlskey=client-key.pem ps
+```
