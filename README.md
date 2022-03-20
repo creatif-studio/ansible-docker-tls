@@ -17,7 +17,7 @@ Access your docker on servers from localhost like using kubectl.
 ## How to enable Docker API?
 - Open your docker.service `/lib/systemd/system/docker.service`
 - Look this line `ExecStart=/usr/bin/dockerd -H fd://`
-- Comment from `-H fd:// ...`
+- Comment from `# -H fd:// ...`
 - Restart your daemon service `systemctl daemon-reload`
 - Restart your docker service `systemctl restart docker`
 - Create a new file in `/etc/docker/daemon.json` in your docker servers
