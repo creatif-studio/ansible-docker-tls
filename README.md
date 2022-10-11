@@ -1,5 +1,5 @@
-# Docker API
-Access your docker on servers from localhost like using kubectl.
+# CloudBoz CTL
+Remote access your cloudboz cluster from localhost like using kubectl.
 
 ## How to generate Docker API Certs?
 - Clone this repository
