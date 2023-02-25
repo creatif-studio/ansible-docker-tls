@@ -1,7 +1,16 @@
-# CloudBoz CTL
-Remote access your cloudboz cluster from localhost like using kubectl.
+# Docker TLS
 
-## How to generate Docker API Certs?
+This is a bash script used to generate TLS certificates for securing the Docker daemon socket
+
+## How to generate TLS?
+
+You can run this command line by line
+
+```
+git clone https://github.com/creatif-studio/dockertls.git
+cd dockertls; chmod +x generate.sh
+sudo ./generate.sh
+```
 - Clone this repository
 - Change permission `chmod +x generate.sh`
 - Generate your certs with `generate.sh`
