@@ -1,6 +1,12 @@
-# Docker TLS
+<p align="center">
+  <a href="https://github.com/creatif-studio/dockertls">
+    <img alt="Docker TLS" width="75px" height="75px" src="./assets/logo.png">
+  </a>
+</p>
 
-This is a bash script used to generate TLS certificates for securing the Docker daemon socket
+<p align="center">
+  Generate TLS Certificates for Securing the Docker Daemon Socket
+</p>
 
 ## How to generate certificate?
 
@@ -17,6 +23,7 @@ sudo ./generate.sh
 ```
 
 **Example usage**
+
 ```
 ./generate.sh -m ca -pw change-your-ramdon-string -t certs -e 900
 ./generate.sh -m server -h server -pw change-your-ramdon-string -t certs -e 900
@@ -28,6 +35,7 @@ sudo ./generate.sh
 ```
 
 ## How to enable Docker TLS?
+
 - Open your docker.service `/lib/systemd/system/docker.service`
 - Look this line `ExecStart=/usr/bin/dockerd -H fd://`
 - Comment from `# -H fd:// ...`
@@ -39,6 +47,7 @@ sudo ./generate.sh
 - Create virtual host `"echo your-ip server" > /etc/hosts`
 
 ## How to use?
+
 ```
 docker -H server:2376 --tlsverify --tlscacert=ca.pem --tlscert=client-cert.pem --tlskey=client-key.pem ps
 ```
