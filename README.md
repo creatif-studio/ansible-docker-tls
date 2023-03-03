@@ -13,7 +13,7 @@
 You can run this command line by line
 
 ```
-git clone https://github.com/creatif-studio/dockertls.git
+git clone https://github.com/creatif-studio/docker-tls.git
 cd dockertls; chmod +x generate.sh
 sudo ./generate.sh
 
