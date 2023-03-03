@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/creatif-studio/dockertls">
+  <a href="https://github.com/creatif-studio/docker-tls">
     <img alt="Docker TLS" width="75px" height="75px" src="./assets/logo.png">
   </a>
 </p>
